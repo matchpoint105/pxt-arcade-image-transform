@@ -213,6 +213,8 @@ namespace transformSprites {
         let y: number = 0;
         console.logValue("image-width", sprite.image.width);
         console.logValue("image-height", sprite.image.height);
+        console.logValue("sprite.id", sprite.id);
+        console.log("-----");
         switch (angle) {
             case 0:
                 return sprite.image.clone();
