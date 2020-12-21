@@ -226,6 +226,10 @@ namespace transformSprites {
                             sprite.image.getPixel(y, sprite.image.width - x));
                     }   // for ( y )
                 }   // for ( x )
+                toReturn.image.setPixel(0, 0, 0);
+                toReturn.image.setPixel(toReturn.image.width-1, 0, 0);
+                toReturn.image.setPixel(0, toReturn.image.height-1, 0);
+                toReturn.image.setPixel(toReturn.image.width-1, toReturn.image.height-1, 0);
                 return toReturn;
             case 180:
                 toReturn = image.create(sprite.image.width, sprite.image.height);
