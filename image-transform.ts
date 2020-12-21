@@ -227,9 +227,9 @@ namespace transformSprites {
                     }   // for ( y )
                 }   // for ( x )
                 toReturn.setPixel(0, 0, 0);
-                toReturn.setPixel(toReturn.image.width-1, 0, 0);
-                toReturn.setPixel(0, toReturn.image.height-1, 0);
-                toReturn.setPixel(toReturn.image.width-1, toReturn.image.height-1, 0);
+                toReturn.setPixel(toReturn.width-1, 0, 0);
+                toReturn.setPixel(0, toReturn.height-1, 0);
+                toReturn.setPixel(toReturn.width-1, toReturn.height-1, 0);
                 return toReturn;
             case 180:
                 toReturn = image.create(sprite.image.width, sprite.image.height);
