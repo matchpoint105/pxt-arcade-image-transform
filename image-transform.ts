@@ -223,8 +223,8 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(y, sprite.image.width - x));
-                        console.log("<" + y + "," + (sprite.image.width - x) + ">");
+                            sprite.image.getPixel(sprite.image.width - y, x));
+                        //console.log("<" + y + "," + (sprite.image.width - x) + ">");
                     }   // for ( y )
                 }   // for ( x )
                 toReturn.setPixel(0, 0, 15);
