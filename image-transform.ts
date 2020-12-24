@@ -211,10 +211,6 @@ namespace transformSprites {
         let toReturn: Image = null;
         let x: number = 0;
         let y: number = 0;
-        console.logValue("image-width", sprite.image.width);
-        console.logValue("image-height", sprite.image.height);
-        console.logValue("sprite.id", sprite.id);
-        console.log("-----");
         switch (angle) {
             case 0:
                 return sprite.image.clone();
@@ -223,14 +219,9 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(sprite.image.width - y, x));
-                        //console.log("<" + y + "," + (sprite.image.width - x) + ">");
+                            sprite.image.getPixel(y, x));
                     }   // for ( y )
                 }   // for ( x )
-                toReturn.setPixel(0, 0, 15);
-                toReturn.setPixel(toReturn.width-1, 0, 2);
-                toReturn.setPixel(0, toReturn.height-1, 3);
-                toReturn.setPixel(toReturn.width-1, toReturn.height-1, 4);
                 return toReturn;
             case 180:
                 toReturn = image.create(sprite.image.width, sprite.image.height);
@@ -246,7 +237,8 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(sprite.image.height - y, x));
+                            //X sprite.image.getPixel(y, sprite.image.height - x));
+                            sprite.image.getPixel(sprite.image.width - y, x));
                     }   // for ( y )
                 }   // for ( x )
                 return toReturn;
