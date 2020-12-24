@@ -219,7 +219,7 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(y, x));
+                            sprite.image.getPixel(y, sprite.image.height - x));
                     }   // for ( y )
                 }   // for ( x )
                 return toReturn;
@@ -237,7 +237,6 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            //X sprite.image.getPixel(y, sprite.image.height - x));
                             sprite.image.getPixel(sprite.image.width - y, x));
                     }   // for ( y )
                 }   // for ( x )
