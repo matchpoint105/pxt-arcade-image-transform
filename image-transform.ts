@@ -219,22 +219,16 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(y, sprite.image.height - x));
+                            sprite.image.getPixel(y, sprite.image.height - x - 1));
                     }   // for ( y )
-                }   // for ( x )
-                
-                toReturn.setPixel(0, 0, 15);
-                toReturn.setPixel(toReturn.width-1, 0, 2);
-                toReturn.setPixel(0, toReturn.height-1, 3);
-                toReturn.setPixel(toReturn.width-1, toReturn.height-1, 4);
-
+                }   // for ( x )                
                 return toReturn;
             case 180:
                 toReturn = image.create(sprite.image.width, sprite.image.height);
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(sprite.image.width - x, sprite.image.height - y));
+                            sprite.image.getPixel(sprite.image.width - x - 1, sprite.image.height - y - 1));
                     }   // for ( y )
                 }   // for ( x )
                 return toReturn;
@@ -243,7 +237,7 @@ namespace transformSprites {
                 for (x = 0; x < toReturn.width; x++) {
                     for (y = 0; y < toReturn.height; y++) {
                         toReturn.setPixel(x, y,
-                            sprite.image.getPixel(sprite.image.width - y, x));
+                            sprite.image.getPixel(sprite.image.width - y - 1, x));
                     }   // for ( y )
                 }   // for ( x )
                 return toReturn;
